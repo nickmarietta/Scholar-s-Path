@@ -1,0 +1,22 @@
+[
+    {
+      "id": "math-1",
+      "name": "Algebra Basics",
+      "description": "Solve simple algebra equations",
+      "levelRequired": 1,
+      "xpReward": 50,
+      "questions": [
+        {
+          "question": "What is x in 2x + 4 = 10?",
+          "choices": ["2", "3", "4", "5"],
+          "answer": "3"
+        },
+        {
+          "question": "What is 3x = 9?",
+          "choices": ["1", "2", "3", "4"],
+          "answer": "3"
+        }
+      ]
+    }
+  ]
+  

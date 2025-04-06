@@ -14,51 +14,40 @@ const edgeTypes = {
 
 const nodes = [
   {
-    id: '1',
+    id: 'core',
     type: 'custom',
-    position: { x: 100, y: 100 },
+    position: { x: 375, y: 300 },
+    data: { label: 'Core Knowledge', size: 'large', className: 'w-48 h-48 text-xl ring-4 ring-purple-400 animate-pulse', locked: false },
+    draggable: false
+  },
+  {
+    id: 'math',
+    type: 'custom',
+    position: { x: 400, y: 100 },
     data: { label: 'Math' },
     draggable: false
   },
   {
-    id: '2',
+    id: 'history',
     type: 'custom',
-    position: { x: 300, y: 200 },
-    data: { label: 'Algebra' },
+    position: { x: 650, y: 500 },
+    data: { label: ' History' },
     draggable: false
   },
   {
-    id: '3',
+    id: 'science',
     type: 'custom',
-    position: { x: 500, y: 300 },
-    data: { label: 'Geometry' },
+    position: { x: 150, y: 500 },
+    data: { label: 'Science' },
     draggable: false
-  },
-  {
-    id: '4',
-    type: 'custom',
-    position: { x: 700, y: 400 },
-    data: { label: 'Calculus' },
-    draggable: false
-  },
-  {
-    id: '5',
-    type: 'custom',
-    position: { x: 0, y: 0 },
-    data: { label: 'Algebra' },
-    draggable: false
-  },
-  {
-    id: '6',
-    type: 'custom',
-    position: { x: 900, y: 500 },
-    data: { label: 'Algebra' },
-    draggable: false
-  },
+  }
 ];
 
+
 const edges = [
-  { id: 'e1-2', source: '1', target: '2' }
+  { id: 'e-core-math', source: 'core', target: 'math', type: 'custom' },
+  { id: 'e-core-history', source: 'core', target: 'history', type: 'custom' },
+  { id: 'e-core-science', source: 'core', target: 'science', type: 'custom' }
 ];
 
 export default function SkillTree() {
