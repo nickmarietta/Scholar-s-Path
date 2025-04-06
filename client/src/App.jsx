@@ -1,5 +1,5 @@
 import React from 'react';
-import SkillTree from './SkillTree';
+import SkillTree from './pages/SkillTree';
 
 export default function App() {
   return (

@@ -1,8 +1,8 @@
 import React from 'react';
 import { ReactFlow, Background, Controls } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
-import CustomNode from './CustomNode';
-import CustomEdge from './CustomEdge';
+import CustomNode from '../components/CustomNode';
+import CustomEdge from '../components/CustomEdge';
 
 const nodeTypes = {
   custom: CustomNode
