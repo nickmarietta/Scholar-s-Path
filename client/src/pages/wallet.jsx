@@ -35,7 +35,7 @@ function Wallet() {
         type="number"
         value={amount}
         onChange={(e) => setAmount(e.target.value)}
-        placeholder="Enter gold amount"
+        placeholder="Enter Money"
       />
 
       <div>
