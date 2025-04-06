@@ -9,8 +9,15 @@ export default function CustomEdge({ id, sourceX, sourceY, targetX, targetY }) {
   });
  
   return (
-    <>
-      <BaseEdge id={id} path={edgePath} />
-    </>
+      <BaseEdge
+        id={id}
+        path={edgePath}
+        style={{
+          stroke: '#64748b', // Slate
+          strokeWidth: 3,
+          filter: 'drop-shadow(0 0 4px #94a3b8)',
+          animation: 'glowPulse 1.5s ease-in-out infinite'
+        }}
+      />
   );
 }

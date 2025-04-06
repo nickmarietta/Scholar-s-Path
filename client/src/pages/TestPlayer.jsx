@@ -32,7 +32,7 @@ export default function TestPlayer({ player, setPlayer }) {
   };
 
   return (
-    <div className="p-6 text-white max-w-xl mx-auto">
+    <div className="p-6 text-black max-w-xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Question {index + 1}</h1>
       <p className="text-lg mb-4">{current.question}</p>
       <div className="space-y-2 mb-4">

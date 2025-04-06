@@ -1,18 +1,34 @@
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import CharacterIcon from '../components/CharacterIcon';
 
+// Sample character list (you may already have this elsewhere)
 const characters = [
   {
     id: 'logimancer',
     name: 'Logimancer',
-    img: 'public/firemage.png',
-    description: 'Master of logic and numbers.', 
+    img: 'logimancer.png',
+    description: 'Master of logic and numbers.'
   },
   {
     id: 'bio-alchemist',
     name: 'Bio Alchemist',
-    img: '/characters/bio-alchemist.png',
+    img: 'bio-alchemist.png',
     description: 'Potion-brewing knowledge wizard.'
+  },
+  {
+    id: 'arcane-analyst',
+    name: 'Arcane Analyst',
+    img: 'arcane-analyst.png',
+    description: 'Dekubopdomdem.'
+  },
+  {
+    id: 'eco-sorcerer',
+    name: 'Eco Sorcerer',
+    img: 'eco-sorcerer.png',
+    description: 'Nature-loving magic user.'
   }
+  // Add more...
 ];
 
 export default function CharacterSelect({ setPlayer }) {
@@ -25,20 +41,15 @@ export default function CharacterSelect({ setPlayer }) {
   };
 
   return (
-    <div className="w-screen h-screen bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('parchment.avif')" }}>
-      <h1 className="text-2xl font-bold mb-4 justify-center">Choose Your Character</h1>
-      <div className="flex flex-wrap justify-center gap-6" >
+    <div
+      className="w-screen h-screen bg-cover bg-center bg-no-repeat flex flex-col items-center pt-12"
+      style={{ backgroundImage: "url('test.jpg')" }}
+    >
+      <h1 className="text-4xl font-uncial text-center">Choose Your Character</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {characters.map((char) => (
-          <div
-            key={char.id}
-            onClick={() => handleSelect(char)}
-            className="w-48 p-4 border rounded-lg shadow cursor-pointer hover:bg-gray-100"
-          >
-            <img src={char.img} alt={char.name} className="w-24 h-24 mx-auto object-contain" />
-            <h2 className="text-xl mt-2">{char.name}</h2>
-            <p className="text-sm text-gray-500">{char.description}</p>
-          </div>
-        ))}
+          <CharacterIcon key={char.id} character={char} onSelect={handleSelect} />
+        ))}   
       </div>
     </div>
   );
