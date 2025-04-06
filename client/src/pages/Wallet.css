@@ -1,0 +1,69 @@
+/* Wallet.css */
+
+.wallet-container {
+    background: radial-gradient(circle, #2d1f46 0%, #0f0f2d 100%);
+    color: #f3e9ff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(153, 50, 204, 0.6);
+    max-width: 400px;
+    margin: 60px auto;
+    font-family: 'Cinzel', serif;
+    text-align: center;
+  }
+  
+  .wallet-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px #000;
+  }
+  
+  .wallet-balance {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  input[type="number"] {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    width: 70%;
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    margin: 5px;
+    padding: 10px 16px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #6a4ea3, #b186ff);
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px #bb86fc;
+  }
+  
+  button:active {
+    transform: scale(0.95);
+    box-shadow: inset 0 0 5px #999;
+  }
+  
+  /* Optional: glowing border */
+  .wallet-container::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    background: linear-gradient(45deg, #d1b3ff, #6a4ea3, #2d1f46);
+    z-index: -1;
+    filter: blur(15px);
+    opacity: 0.2;
+  }
+  
