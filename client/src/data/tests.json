@@ -1,4 +1,5 @@
-[
+{
+  "Math": [
     {
       "id": "math-1",
       "name": "Algebra Basics",
@@ -17,6 +18,99 @@
           "answer": "3"
         }
       ]
+    },
+    {
+      "id": "math-2",
+      "name": "Algebra II",
+      "description": "Tackle quadratic equations",
+      "levelRequired": 2,
+      "xpReward": 80,
+      "questions": [
+        {
+          "question": "What is the solution to x² - 4 = 0?",
+          "choices": ["2", "4", "-2", "±2"],
+          "answer": "±2"
+        }
+      ]
+    },
+    {
+      "id": "math-3",
+      "name": "Geometry Fundamentals",
+      "description": "Test your understanding of shapes and angles",
+      "levelRequired": 2,
+      "xpReward": 90,
+      "questions": [
+        {
+          "question": "What is the sum of angles in a triangle?",
+          "choices": ["90°", "180°", "360°", "270°"],
+          "answer": "180°"
+        }
+      ]
+    }
+  ],
+  "Science": [
+    {
+      "id": "science-1",
+      "name": "Biology Basics",
+      "description": "Learn about cells and life",
+      "levelRequired": 1,
+      "xpReward": 60,
+      "questions": [
+        {
+          "question": "What is the basic unit of life?",
+          "choices": ["Atom", "Molecule", "Cell", "Organ"],
+          "answer": "Cell"
+        }
+      ]
+    },
+    {
+      "id": "science-2",
+      "name": "Chemistry Reactions",
+      "description": "Understand chemical reactions and equations",
+      "levelRequired": 2,
+      "xpReward": 80,
+      "questions": [
+        {
+          "question": "What is H2O?",
+          "choices": ["Hydrogen", "Oxygen", "Water", "Helium"],
+          "answer": "Water"
+        }
+      ]
+    }
+  ],
+  "History": [
+    {
+      "id": "history-1",
+      "name": "Ancient Civilizations",
+      "description": "Explore the early foundations of human society",
+      "levelRequired": 1,
+      "xpReward": 70,
+      "questions": [
+        {
+          "question": "Where did the Egyptians build pyramids?",
+          "choices": ["Rome", "China", "Greece", "Egypt"],
+          "answer": "Egypt"
+        }
+      ]
+    },
+    {
+      "id": "history-2",
+      "name": "World Wars",
+      "description": "Understand the causes and impacts of global conflicts",
+      "levelRequired": 2,
+      "xpReward": 90,
+      "questions": [
+        {
+          "question": "Which event started World War I?",
+          "choices": [
+            "Fall of Berlin Wall",
+            "Assassination of Archduke Ferdinand",
+            "Pearl Harbor",
+            "French Revolution"
+          ],
+          "answer": "Assassination of Archduke Ferdinand"
+        }
+      ]
     }
   ]
-  
+}

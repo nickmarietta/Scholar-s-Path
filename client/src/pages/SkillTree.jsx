@@ -37,7 +37,6 @@ export default function SkillTree() {
       },
       draggable: false,
     },
-    // Top branch - Math
     {
       id: 'math',
       type: 'custom',
@@ -68,7 +67,6 @@ export default function SkillTree() {
       },
       draggable: false,
     },
-    // Bottom left branch - Science
     {
       id: 'science',
       type: 'custom',
@@ -99,7 +97,6 @@ export default function SkillTree() {
       },
       draggable: false,
     },
-    // Bottom right branch - History
     {
       id: 'history',
       type: 'custom',
@@ -159,13 +156,23 @@ export default function SkillTree() {
         panOnDrag={false}
         zoomOnScroll={true}
         elementsSelectable={false}
+        onNodeClick={(event, node) => {
+          if (node?.data?.onClick) {
+            node.data.onClick();
+          }
+        }}
         fitView
       />
 
-      {/* Modal for node details */}
       {selectedNode && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white p-6 rounded-xl shadow-lg text-black w-80 max-w-full">
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+          onClick={() => setSelectedNode(null)}
+        >
+          <div
+            className="bg-white p-6 rounded-xl shadow-lg text-black w-80 max-w-full"
+            onClick={(e) => e.stopPropagation()}
+          >
             <h2 className="text-xl font-bold mb-2">{selectedNode.label}</h2>
             <p className="text-sm text-gray-700 mb-4">{selectedNode.description}</p>
             <button

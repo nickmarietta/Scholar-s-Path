@@ -5,11 +5,17 @@ import tests from '../data/tests.json';
 export default function TestPlayer({ player, setPlayer }) {
   const { id } = useParams();
   const navigate = useNavigate();
-  const test = tests.find(t => t.id === id);
+
+  const allTests = Object.values(tests).flat();
+  const test = allTests.find(t => t.id === id);
 
   const [index, setIndex] = useState(0);
   const [correct, setCorrect] = useState(0);
   const [selected, setSelected] = useState(null);
+
+  if (!test) {
+    return <div className="text-black p-4">Test not found.</div>;
+  }
 
   const current = test.questions[index];
 
@@ -22,12 +28,11 @@ export default function TestPlayer({ player, setPlayer }) {
       setIndex(i => i + 1);
       setSelected(null);
     } else {
-      // XP gain & level logic
       const newXP = player.xp + test.xpReward;
       const newLevel = Math.floor(newXP / 100) + 1;
       setPlayer({ ...player, xp: newXP, level: newLevel });
 
-      navigate('/skill-tree'); // Or a results page
+      navigate('/skill-tree');
     }
   };
 
@@ -40,7 +45,7 @@ export default function TestPlayer({ player, setPlayer }) {
           <label
             key={choice}
             className={`block p-2 rounded cursor-pointer ${
-              selected === choice ? 'bg-purple-600' : 'bg-gray-700 hover:bg-gray-600'
+              selected === choice ? 'bg-purple-600 text-white' : 'bg-gray-200 hover:bg-gray-300'
             }`}
           >
             <input
@@ -58,7 +63,7 @@ export default function TestPlayer({ player, setPlayer }) {
       <button
         onClick={handleSubmit}
         disabled={!selected}
-        className="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 rounded"
+        className="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 rounded text-black"
       >
         Submit
       </button>

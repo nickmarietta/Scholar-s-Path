@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import CharacterIcon from '../components/CharacterIcon';
 
-// Sample character list (you may already have this elsewhere)
+//Define characters going to be used in game
 const characters = [
   {
     id: 'logimancer',
@@ -20,7 +20,7 @@ const characters = [
     id: 'arcane-analyst',
     name: 'Arcane Analyst',
     img: 'arcane-analyst.png',
-    description: 'Dekubopdomdem.'
+    description: 'Mystical scholar, wisdom weaver.'
   },
   {
     id: 'eco-sorcerer',
@@ -28,7 +28,6 @@ const characters = [
     img: 'eco-sorcerer.png',
     description: 'Nature-loving magic user.'
   }
-  // Add more...
 ];
 
 export default function CharacterSelect({ setPlayer }) {
@@ -45,7 +44,7 @@ export default function CharacterSelect({ setPlayer }) {
       className="w-screen h-screen bg-cover bg-center bg-no-repeat flex flex-col items-center pt-12"
       style={{ backgroundImage: "url('test.jpg')" }}
     >
-      <h1 className="text-4xl font-uncial text-center">Choose Your Character</h1>
+      <h1 className="text-4xl font-uncial text-center ">Choose Your Character</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {characters.map((char) => (
           <CharacterIcon key={char.id} character={char} onSelect={handleSelect} />

@@ -13,7 +13,7 @@ export default function CustomEdge({ id, sourceX, sourceY, targetX, targetY }) {
         id={id}
         path={edgePath}
         style={{
-          stroke: '#64748b', // Slate
+          stroke: '#64748b',
           strokeWidth: 3,
           filter: 'drop-shadow(0 0 4px #94a3b8)',
           animation: 'glowPulse 1.5s ease-in-out infinite'
